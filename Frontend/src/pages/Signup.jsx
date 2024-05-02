@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import signupImg from "../assets/images/signup.gif"
-import avatar from "../assets/images/doctor-img01.png"
 import { Link, useNavigate } from 'react-router-dom'
 import uploadImageToCloudinary from '../utils/uploadCloudinary'
 import { BASE_URL } from '../config'
@@ -43,7 +42,7 @@ const Signup = () => {
     setLoading(true)
     try {
       const res = await fetch(`${BASE_URL}/auth/register`, {
-        method: 'POST',
+        method: 'post',
         headers: {
           'Content-Type': 'application/json'
         },
@@ -57,11 +56,11 @@ const Signup = () => {
 
       setLoading(false)
       toast.success(message)
-      navigate('/login')
+      navigate('/home')
 
     } catch (err) {
-      setLoading(false)
       toast.error(err.message)
+      setLoading(false)
     }
   }
 
@@ -173,7 +172,7 @@ const Signup = () => {
                 <button
                   disabled={loading && true}
                   type='submit'
-                  className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full w-full bg-primaryColor text-White text-[18px] leading-[30px] rounded-lg'
+                  className='bg-primaryColor hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg w-full bg-primaryColor text-White text-[18px] leading-[30px] rounded-lg'
                 >
                   {loading ? (<HashLoader size={35} color='#ffffff' />) : "Sign Up"}
                 </button>
