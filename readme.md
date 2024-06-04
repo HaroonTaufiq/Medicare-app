@@ -3,7 +3,7 @@
 ![Mian](./Main.png)
 
 ## Project Overview
-This project demonstrates the development of a fully responsive doctor appointment booking website using the MERN stack (MongoDB, Express.js, React.js, Node.js) with Stripe integration for payment processing. The project is designed to cover a wide range of advanced and complex topics, from the basics of setting up the development environment to implementing advanced features like authentication, authorization, and payment gateways.
+This project demonstrates the development of a fully responsive doctor appointment booking website using the MERN stack (MongoDB, Express.js, React.js, Node.js). The project is designed to cover a wide range of advanced and complex topics, from the basics of setting up the development environment to implementing advanced features like authentication, authorization, and payment gateways.
 
 ## Technologies Used
 - **Frontend:** React.js (with Vite), Tailwind CSS
